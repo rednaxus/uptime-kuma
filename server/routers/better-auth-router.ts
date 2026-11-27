@@ -56,7 +56,7 @@ export async function createBetterAuthRouter() {
             try {
                 if (!(await needSetup())) {
                     throw new Error(
-                        "Uptime Kuma has been initialized. If you want to run setup again, please delete the database."
+                        "Aleph Uptime has been initialized. If you want to run setup again, please delete the database."
                     );
                 }
 
@@ -136,7 +136,7 @@ async function removePartialFirstAdmin(username: string) {
 export async function createFirstAdmin(username: string, password: string) {
     if (await hasUser(true)) {
         throw new Error(
-            "Uptime Kuma has been initialized. If you want to run setup again, please delete the database."
+            "Aleph Uptime has been initialized. If you want to run setup again, please delete the database."
         );
     }
 

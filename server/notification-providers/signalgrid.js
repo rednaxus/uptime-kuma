@@ -12,7 +12,7 @@ class Signalgrid extends NotificationProvider {
         const okMsg = "Sent Successfully.";
 
         let type = "INFO";
-        let title = "Uptime Kuma";
+        let title = "Aleph Uptime";
 
         if (heartbeatJSON) {
             if (heartbeatJSON.status === DOWN) {

@@ -25,7 +25,7 @@ class Pinglet extends NotificationProvider {
                 },
             });
 
-            // Pinglet's uptimekuma rewriter accepts Uptime Kuma's webhook payload
+            // Pinglet's uptimekuma rewriter accepts Aleph Uptime's webhook payload
             // as-is and maps it to a titled message with level and priority
             // server-side, so this provider just forwards the raw shape.
             await axios.post(

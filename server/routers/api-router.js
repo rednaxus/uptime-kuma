@@ -245,7 +245,7 @@ function getOpenApiDocument() {
         openApiDocument = createDocument({
             openapi: "3.1.0",
             info: {
-                title: "Uptime Kuma API",
+                title: "Aleph Uptime API",
                 version: checkVersion.version,
                 description: "Alpha. Requires an API key and the `API and MCP` setting to be enabled.",
             },

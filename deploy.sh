@@ -32,8 +32,8 @@ tar czf "$BACKUP" data
 echo "Backup: $BACKUP (previous commit: $PREV)"
 
 git checkout -q --detach "$SHA"
-npm ci --omit dev --no-audit --no-fund
-npm run download-dist
+npm ci --no-audit --no-fund
+npm run build
 
 sudo systemctl start uptime-kuma
 for i in $(seq 1 30); do
@@ -45,7 +45,7 @@ for i in $(seq 1 30); do
 done
 
 echo "Health check FAILED. Check: journalctl -u uptime-kuma -n 50" >&2
-echo "Rollback: stop service, restore $BACKUP into data/, git checkout $PREV, npm ci, npm run download-dist" >&2
+echo "Rollback: stop service, restore $BACKUP into data/, git checkout $PREV, npm ci, npm run build" >&2
 exit 1
 REMOTE
 

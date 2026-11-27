@@ -21,7 +21,7 @@ import { initAdminFromEnv } from "./initial-admin";
 import { betterAuthSocketHandler } from "./socket-handlers/better-auth-socket-handler";
 import { loadEnvFile } from "node:process";
 
-console.log("Welcome to Uptime Kuma");
+console.log("Welcome to Aleph Uptime");
 
 initDayjs();
 
@@ -103,7 +103,7 @@ if (isDevEnv() || process.env.UPTIME_KUMA_DEBUG_INSPECTOR === "1") {
 }
 
 const checkVersion = require("./check-version");
-log.info("server", "Uptime Kuma Version:", checkVersion.version);
+log.info("server", "Aleph Uptime Version:", checkVersion.version);
 
 log.info("server", "Loading modules");
 

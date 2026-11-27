@@ -30,14 +30,14 @@ class SIGNL4 extends NotificationProvider {
 
             if (heartbeatJSON == null) {
                 // Test alert
-                data.title = "Uptime Kuma Alert";
+                data.title = "Aleph Uptime Alert";
                 data.message = msg;
             } else if (heartbeatJSON.status === UP) {
-                data.title = "Uptime Kuma Monitor ✅ Up";
+                data.title = "Aleph Uptime Monitor ✅ Up";
                 data["X-S4-ExternalID"] = "UptimeKuma-" + monitorJSON.id;
                 data["X-S4-Status"] = "resolved";
             } else if (heartbeatJSON.status === DOWN) {
-                data.title = "Uptime Kuma Monitor 🔴 Down";
+                data.title = "Aleph Uptime Monitor 🔴 Down";
                 data["X-S4-ExternalID"] = "UptimeKuma-" + monitorJSON.id;
                 data["X-S4-Status"] = "new";
             }
